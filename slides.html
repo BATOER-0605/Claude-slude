@@ -458,6 +458,216 @@ tr:nth-child(even) td { background: rgba(255,255,255,0.025); }
 
 .info-strip-green strong { color: #50C878; }
 
+/* ─────────────────────────────────────────
+   STRENGTH CARDS (5-up)
+───────────────────────────────────────── */
+.str-grid {
+  display: flex;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.str-card {
+  flex: 1;
+  background: rgba(255,255,255,0.055);
+  border: 1px solid rgba(255,255,255,0.11);
+  border-radius: 12px;
+  padding: 18px 14px 16px;
+  border-top: 3px solid #4A90E2;
+}
+
+.str-card .s-icon { font-size: 26px; margin-bottom: 8px; }
+
+.str-card h3 {
+  font-size: 14px;
+  color: #e0eeff;
+  font-weight: bold;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.str-card p {
+  font-size: 12px;
+  color: #9ab8d8;
+  line-height: 1.7;
+}
+
+.str-num {
+  display: inline-block;
+  background: linear-gradient(135deg, #4A90E2, #7B68EE);
+  color: #fff;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 2px 8px;
+  border-radius: 8px;
+  margin-bottom: 6px;
+}
+
+/* ─────────────────────────────────────────
+   AGENT LOOP FLOW
+───────────────────────────────────────── */
+.flow-wrap {
+  display: flex;
+  gap: 22px;
+  margin-top: 14px;
+}
+
+.flow-col { flex: 1; }
+.tools-col { flex: 1.1; }
+
+.flow-step {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 13px;
+  color: #e0eeff;
+  text-align: center;
+  position: relative;
+}
+
+.flow-step.highlight {
+  background: rgba(74,144,226,0.15);
+  border-color: rgba(74,144,226,0.4);
+  color: #a0d0ff;
+}
+
+.flow-arrow {
+  text-align: center;
+  color: #4A90E2;
+  font-size: 16px;
+  line-height: 1.2;
+  padding: 2px 0;
+}
+
+.flow-branch {
+  display: flex;
+  gap: 10px;
+  margin-top: 0;
+}
+
+.flow-branch .flow-step { flex: 1; font-size: 12px; }
+
+.tool-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 0;
+}
+
+.tool-item {
+  background: rgba(255,255,255,0.055);
+  border: 1px solid rgba(255,255,255,0.11);
+  border-radius: 8px;
+  padding: 10px 12px;
+  width: calc(50% - 5px);
+}
+
+.tool-item h4 {
+  font-size: 13px;
+  color: #6ab4ff;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.tool-item p {
+  font-size: 11.5px;
+  color: #8aaccc;
+  line-height: 1.5;
+}
+
+/* ─────────────────────────────────────────
+   SCENARIO CARDS
+───────────────────────────────────────── */
+.scen-grid {
+  display: flex;
+  gap: 16px;
+  margin-top: 14px;
+}
+
+.scen-card {
+  flex: 1;
+  background: rgba(255,255,255,0.055);
+  border: 1px solid rgba(255,255,255,0.11);
+  border-radius: 12px;
+  padding: 16px 16px 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+.scen-card h3 {
+  font-size: 14.5px;
+  color: #ffffff;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.scen-card .scen-icon { font-size: 22px; margin-bottom: 6px; }
+
+.scen-steps {
+  flex: 1;
+  margin-bottom: 10px;
+}
+
+.scen-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.step-num {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: rgba(74,144,226,0.3);
+  border: 1px solid #4A90E2;
+  text-align: center;
+  line-height: 18px;
+  font-size: 10px;
+  color: #6ab4ff;
+  font-weight: bold;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.step-arrow {
+  color: #4A90E2;
+  font-size: 12px;
+  padding: 0 0 4px 26px;
+}
+
+.scen-step p {
+  font-size: 12px;
+  color: #b0c8e8;
+  line-height: 1.6;
+}
+
+.metric-box {
+  background: rgba(80,200,120,0.1);
+  border: 1px solid rgba(80,200,120,0.3);
+  border-radius: 8px;
+  padding: 8px 12px;
+  text-align: center;
+}
+
+.metric-label {
+  font-size: 10px;
+  color: #7aaa90;
+  margin-bottom: 3px;
+}
+
+.metric-val {
+  font-size: 13px;
+  color: #50C878;
+  font-weight: bold;
+}
+
+.metric-val .before { color: #ff8080; text-decoration: line-through; margin-right: 6px; font-weight: normal; }
+.metric-val .arrow-right { color: #888; margin-right: 6px; }
+
 </style>
 </head>
 <body>
@@ -477,7 +687,7 @@ tr:nth-child(even) td { background: rgba(255,255,255,0.025); }
     <span>│</span>
     <span>（部署名）</span>
   </div>
-  <div class="slide-num">1 / 9</div>
+  <div class="slide-num">1 / 13</div>
 </div>
 
 <!-- ══════════════════════════════════════════
@@ -521,7 +731,7 @@ tr:nth-child(even) td { background: rgba(255,255,255,0.025); }
       </div>
     </div>
   </div>
-  <div class="slide-num">2 / 9</div>
+  <div class="slide-num">2 / 13</div>
 </div>
 
 <!-- ══════════════════════════════════════════
@@ -582,7 +792,7 @@ tr:nth-child(even) td { background: rgba(255,255,255,0.025); }
       </tbody>
     </table>
   </div>
-  <div class="slide-num">3 / 9</div>
+  <div class="slide-num">3 / 13</div>
 </div>
 
 <!-- ══════════════════════════════════════════
@@ -639,7 +849,7 @@ tr:nth-child(even) td { background: rgba(255,255,255,0.025); }
       ※ 上記機能はすべて <strong>Enterprise プラン</strong> のみ対応。Team プランでは管理コンソールの基本機能（メンバー管理・請求確認）のみ利用可能です。
     </div>
   </div>
-  <div class="slide-num">4 / 9</div>
+  <div class="slide-num">4 / 13</div>
 </div>
 
 <!-- ══════════════════════════════════════════
@@ -717,7 +927,7 @@ tr:nth-child(even) td { background: rgba(255,255,255,0.025); }
       </div>
     </div>
   </div>
-  <div class="slide-num">5 / 9</div>
+  <div class="slide-num">5 / 13</div>
 </div>
 
 <!-- ══════════════════════════════════════════
@@ -776,11 +986,319 @@ tr:nth-child(even) td { background: rgba(255,255,255,0.025); }
       <strong>活用例：</strong>　市場レポートの収集→要約→Slack 投稿の完全自動化　／　コードレビューの自動化　／　社内 FAQ への自律応答エージェント　／　データ分析レポートの定期生成
     </div>
   </div>
-  <div class="slide-num">6 / 9</div>
+  <div class="slide-num">6 / 13</div>
 </div>
 
 <!-- ══════════════════════════════════════════
-     SLIDE 7 — 契約形態の選び方
+     SLIDE 7 — Claudeの独自の強み
+══════════════════════════════════════════ -->
+<div class="slide">
+  <div class="accent-bar"></div>
+  <div class="slide-header">
+    <h2>Claude が選ばれる理由 — 独自の強み</h2>
+    <div class="sub">単なるチャット AI を超えた、エンタープライズ向け差別化機能</div>
+  </div>
+  <div class="slide-content">
+    <div class="str-grid">
+      <div class="str-card" style="border-top-color:#4A90E2;">
+        <div class="s-icon">📄</div>
+        <div class="str-num">最大 200K トークン</div>
+        <h3>超長文コンテキスト処理</h3>
+        <p>約 500 ページ相当の文書・コードベースを一度に読み込み、全体を把握した上で回答・処理。分割せずに大量資料を解析可能。</p>
+      </div>
+      <div class="str-card" style="border-top-color:#50C878;">
+        <div class="s-icon">🧠</div>
+        <div class="str-num" style="background:linear-gradient(135deg,#50C878,#20a060);">Extended Thinking</div>
+        <h3>段階的・深層思考</h3>
+        <p>複雑な問題に対して推論ステップを可視化しながら深く思考。判断根拠が追跡でき、ハルシネーションのリスクを低減。</p>
+      </div>
+      <div class="str-card" style="border-top-color:#9b80f0;">
+        <div class="s-icon">🖱️</div>
+        <div class="str-num" style="background:linear-gradient(135deg,#9b80f0,#6a40e0);">Computer Use</div>
+        <h3>PC・ブラウザ操作</h3>
+        <p>スクリーンを認識しブラウザ・デスクトップアプリを直接操作。API 非対応の既存システムも自動化できる唯一の手段。</p>
+      </div>
+      <div class="str-card" style="border-top-color:#ffaa33;">
+        <div class="s-icon">🔄</div>
+        <div class="str-num" style="background:linear-gradient(135deg,#ffaa33,#e07000);">Agentic Loop</div>
+        <h3>自律実行・自己修正</h3>
+        <p>計画→ツール呼び出し→結果評価→次アクション をループ。エラーを自ら検知・修正しながらタスクを完遂する自律性。</p>
+      </div>
+      <div class="str-card" style="border-top-color:#ff6b9d;">
+        <div class="s-icon">🤝</div>
+        <div class="str-num" style="background:linear-gradient(135deg,#ff6b9d,#c0306a);">Multi-Agent</div>
+        <h3>マルチエージェント協調</h3>
+        <p>オーケストレーター Claude が複数のサブエージェントに役割分担し並列処理。単独では不可能な大規模・長時間タスクを実現。</p>
+      </div>
+    </div>
+    <div class="info-strip" style="margin-top: 14px;">
+      <strong>ポジション：</strong>　Claude は「安全性・正確性・長文処理・自律実行」の 4 軸で設計された、エンタープライズ実務向け AI です。
+    </div>
+  </div>
+  <div class="slide-num">7 / 13</div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     SLIDE 8 — 自律実行の仕組み
+══════════════════════════════════════════ -->
+<div class="slide">
+  <div class="accent-bar"></div>
+  <div class="slide-header">
+    <h2>自律実行の仕組み — エージェントループ</h2>
+    <div class="sub">「計画 → 実行 → 評価 → 再実行」を人間の介在なしに繰り返します</div>
+  </div>
+  <div class="slide-content">
+    <div class="flow-wrap">
+      <div class="flow-col">
+        <div style="font-size: 13px; color: #6ab4ff; font-weight: bold; margin-bottom: 10px; padding-bottom: 6px; border-bottom: 1px solid rgba(74,144,226,0.3);">エージェントの実行フロー</div>
+        <div class="flow-step" style="background:rgba(74,144,226,0.2); border-color:rgba(74,144,226,0.5);">
+          ① ユーザーが目標・タスクを指示
+        </div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-step">
+          ② Claude が実行計画を策定
+        </div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-step">
+          ③ ツール（MCP）を呼び出して情報取得・操作実行
+        </div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-step">
+          ④ 結果を受け取り・評価・エラー検知
+        </div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-step">
+          ⑤ 計画を更新し次のアクションを決定
+        </div>
+        <div class="flow-arrow">↓  ↺ ③〜⑤ を繰り返す</div>
+        <div class="flow-step" style="background:rgba(80,200,120,0.15); border-color:rgba(80,200,120,0.4); color:#90d8a0;">
+          ⑥ タスク完了 → 結果を報告
+        </div>
+      </div>
+      <div class="tools-col">
+        <div style="font-size: 13px; color: #6ab4ff; font-weight: bold; margin-bottom: 10px; padding-bottom: 6px; border-bottom: 1px solid rgba(74,144,226,0.3);">呼び出せるツール（MCP）の種類</div>
+        <div class="tool-grid">
+          <div class="tool-item">
+            <h4>🔍 情報取得</h4>
+            <p>Web 検索・社内 DB クエリ・ドキュメント読み込み・API 呼び出し</p>
+          </div>
+          <div class="tool-item">
+            <h4>💻 コード実行</h4>
+            <p>Python / Shell の実行・ファイル生成・テスト実行・Git 操作</p>
+          </div>
+          <div class="tool-item">
+            <h4>📤 外部サービス連携</h4>
+            <p>Slack 投稿・メール送信・Jira チケット作成・カレンダー操作</p>
+          </div>
+          <div class="tool-item">
+            <h4>🖥️ コンピューター操作</h4>
+            <p>ブラウザ操作・画面認識・フォーム入力・スクリーンショット取得</p>
+          </div>
+          <div class="tool-item">
+            <h4>🗄️ データ操作</h4>
+            <p>SQL 実行・スプレッドシート編集・CSV / JSON 変換・レポート生成</p>
+          </div>
+          <div class="tool-item">
+            <h4>🤖 サブエージェント起動</h4>
+            <p>専門エージェントへのタスク委譲・並列実行・結果集約</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-num">8 / 13</div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     SLIDE 9 — 自動化シナリオ①（バックオフィス）
+══════════════════════════════════════════ -->
+<div class="slide">
+  <div class="accent-bar"></div>
+  <div class="slide-header">
+    <h2>自動化シナリオ① — バックオフィス業務</h2>
+    <div class="sub">反復的・定型的な業務を Claude が完全代替します</div>
+  </div>
+  <div class="slide-content">
+    <div class="scen-grid">
+      <div class="scen-card">
+        <div class="scen-icon">📰</div>
+        <h3>日次市場レポート 自動生成</h3>
+        <div class="scen-steps">
+          <div class="scen-step">
+            <div class="step-num">1</div>
+            <p>毎朝 8 時：業界ニュースサイト・競合 IR・SNS を自動収集</p>
+          </div>
+          <div class="scen-step">
+            <div class="step-num">2</div>
+            <p>重要情報を抽出・要約し社内フォーマットで構造化</p>
+          </div>
+          <div class="scen-step">
+            <div class="step-num">3</div>
+            <p>担当者レビュー不要で Slack #market-watch へ自動投稿</p>
+          </div>
+        </div>
+        <div class="metric-box">
+          <div class="metric-label">担当者の作業時間（1 日あたり）</div>
+          <div class="metric-val">
+            <span class="before">2 時間</span>
+            <span class="arrow-right">→</span>
+            0 分
+          </div>
+        </div>
+      </div>
+      <div class="scen-card">
+        <div class="scen-icon">📋</div>
+        <h3>法務文書 一括レビュー</h3>
+        <div class="scen-steps">
+          <div class="scen-step">
+            <div class="step-num">1</div>
+            <p>契約書 PDF を複数アップロード（200K 文脈で全文把握）</p>
+          </div>
+          <div class="scen-step">
+            <div class="step-num">2</div>
+            <p>標準契約書との差異・リスク条項・要修正箇所を自動抽出</p>
+          </div>
+          <div class="scen-step">
+            <div class="step-num">3</div>
+            <p>リスクランク付きレポートを生成・法務担当へ自動共有</p>
+          </div>
+        </div>
+        <div class="metric-box">
+          <div class="metric-label">1 件あたりの法務確認時間</div>
+          <div class="metric-val">
+            <span class="before">3 時間</span>
+            <span class="arrow-right">→</span>
+            15 分
+          </div>
+        </div>
+      </div>
+      <div class="scen-card">
+        <div class="scen-icon">🧾</div>
+        <h3>経費精算 自動処理</h3>
+        <div class="scen-steps">
+          <div class="scen-step">
+            <div class="step-num">1</div>
+            <p>領収書画像・PDF を受信（メール / Slack 経由）</p>
+          </div>
+          <div class="scen-step">
+            <div class="step-num">2</div>
+            <p>金額・日付・用途・支払先を自動抽出・社内規定と照合</p>
+          </div>
+          <div class="scen-step">
+            <div class="step-num">3</div>
+            <p>承認フローへ自動起票・上長へ通知・会計システムへ連携</p>
+          </div>
+        </div>
+        <div class="metric-box">
+          <div class="metric-label">申請から承認完了までの日数</div>
+          <div class="metric-val">
+            <span class="before">3 日</span>
+            <span class="arrow-right">→</span>
+            即日
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-num">9 / 13</div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     SLIDE 10 — 自動化シナリオ②（開発・エンジニアリング）
+══════════════════════════════════════════ -->
+<div class="slide">
+  <div class="accent-bar"></div>
+  <div class="slide-header">
+    <h2>自動化シナリオ② — ソフトウェア開発</h2>
+    <div class="sub">開発サイクル全体を Claude Code が自律的にサポートします</div>
+  </div>
+  <div class="slide-content">
+    <div class="scen-grid">
+      <div class="scen-card">
+        <div class="scen-icon">🔍</div>
+        <h3>PR 自動コードレビュー</h3>
+        <div class="scen-steps">
+          <div class="scen-step">
+            <div class="step-num">1</div>
+            <p>GitHub に PR が作成されると Claude Code が自動起動</p>
+          </div>
+          <div class="scen-step">
+            <div class="step-num">2</div>
+            <p>バグ・セキュリティ脆弱性・パフォーマンス問題を検出</p>
+          </div>
+          <div class="scen-step">
+            <div class="step-num">3</div>
+            <p>インラインコメントで指摘・改善案を提案、修正コードも自動生成</p>
+          </div>
+        </div>
+        <div class="metric-box">
+          <div class="metric-label">コードレビューの所要時間</div>
+          <div class="metric-val">
+            <span class="before">2 時間</span>
+            <span class="arrow-right">→</span>
+            5 分
+          </div>
+        </div>
+      </div>
+      <div class="scen-card">
+        <div class="scen-icon">♻️</div>
+        <h3>レガシーコード リファクタリング</h3>
+        <div class="scen-steps">
+          <div class="scen-step">
+            <div class="step-num">1</div>
+            <p>大規模コードベースを 200K 文脈で一括読み込み・全体把握</p>
+          </div>
+          <div class="scen-step">
+            <div class="step-num">2</div>
+            <p>技術的負債・非推奨 API・テスト未カバー箇所を洗い出し</p>
+          </div>
+          <div class="scen-step">
+            <div class="step-num">3</div>
+            <p>既存テストを維持しながら段階的にリファクタリング・PR 自動作成</p>
+          </div>
+        </div>
+        <div class="metric-box">
+          <div class="metric-label">主要モジュールのリファクタリング工数</div>
+          <div class="metric-val">
+            <span class="before">2 週間</span>
+            <span class="arrow-right">→</span>
+            2 日
+          </div>
+        </div>
+      </div>
+      <div class="scen-card">
+        <div class="scen-icon">🚨</div>
+        <h3>インシデント 自動対応</h3>
+        <div class="scen-steps">
+          <div class="scen-step">
+            <div class="step-num">1</div>
+            <p>監視ツールのアラートを受信・関連ログを自動収集</p>
+          </div>
+          <div class="scen-step">
+            <div class="step-num">2</div>
+            <p>ログを解析し根本原因を特定・影響範囲を評価</p>
+          </div>
+          <div class="scen-step">
+            <div class="step-num">3</div>
+            <p>修正コードを提案（または自動適用）・ポストモーテムを自動生成</p>
+          </div>
+        </div>
+        <div class="metric-box">
+          <div class="metric-label">平均インシデント対応時間（MTTR）</div>
+          <div class="metric-val">
+            <span class="before">4 時間</span>
+            <span class="arrow-right">→</span>
+            30 分
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-num">10 / 13</div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     SLIDE 11 — 契約形態の選び方
 ══════════════════════════════════════════ -->
 <div class="slide">
   <div class="accent-bar"></div>
@@ -866,7 +1384,7 @@ tr:nth-child(even) td { background: rgba(255,255,255,0.025); }
       </tbody>
     </table>
   </div>
-  <div class="slide-num">7 / 9</div>
+  <div class="slide-num">11 / 13</div>
 </div>
 
 <!-- ══════════════════════════════════════════
@@ -916,7 +1434,7 @@ tr:nth-child(even) td { background: rgba(255,255,255,0.025); }
       </div>
     </div>
   </div>
-  <div class="slide-num">8 / 9</div>
+  <div class="slide-num">12 / 13</div>
 </div>
 
 <!-- ══════════════════════════════════════════
@@ -971,7 +1489,7 @@ tr:nth-child(even) td { background: rgba(255,255,255,0.025); }
       </div>
     </div>
   </div>
-  <div class="slide-num">9 / 9</div>
+  <div class="slide-num">13 / 13</div>
 </div>
 
 </body>
